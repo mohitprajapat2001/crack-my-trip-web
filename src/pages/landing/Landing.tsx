@@ -9,6 +9,13 @@ import Navbar from "@/components/custom/Navbar";
 import { getPhotos } from "@/utils/unsplash";
 import bg from "@/assets/img/bg/boat-in-mountain.jpg";
 /**
+ * Components
+ */
+import { RainbowButton } from "@/components/magicui/rainbow-button";
+import { BoxReveal } from "@/components/magicui/box-reveal";
+import { Globe } from "@/components/magicui/globe";
+
+/**
  * The Landing page component.
  *
  * This component is the main entry point to the Sampatti application.
@@ -33,14 +40,52 @@ const Landing = () => {
         <div className="relative min-h-screen">
           {/* Background image layer */}
           <div
-            className="absolute inset-0 z-0 bg-cover bg-center brightness-100 dark:brightness-50"
+            className="absolute inset-0 z-0 bg-cover bg-center brightness-100 dark:brightness-50 transition-all duration-300"
             style={{ backgroundImage: `url(${image})` }}
           />
 
           {/* Content layer */}
           <div className="relative z-10">
             <Navbar />
-            {/* Add other content here */}
+            <div className="grid grid-cols-2 gap-2 mx-auto w-10/12 backdrop-blur-sm p-5 rounded-3xl hover:shadow-lg transition-all duration-300">
+              <div className="size-full max-w-2xl items-start justify-center overflow-hidden flex flex-col gap-4">
+                <div className="capitalize">
+                  <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                    <p className="text-6xl font-semibold">
+                      Discover{" "}
+                      <span className="text-7xl text-[#91C8E4]">Your</span>
+                    </p>
+                  </BoxReveal>
+                  <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                    <p className="text-6xl font-semibold">
+                      Your Next
+                      <span className="text-7xl text-[#91C8E4]">
+                        {" "}
+                        destination
+                      </span>
+                    </p>
+                  </BoxReveal>
+                </div>
+                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                  <h2 className="mt-[.5rem] text-2xl">
+                    Unforgettable journeys. Hand-picked destinations.
+                    <p className="text-[#91C8E4]">
+                      Trusted by thousands of travelers.
+                    </p>
+                  </h2>
+                </BoxReveal>
+                <RainbowButton className="text-[18px] hover:text-[16px] duration-500">
+                  Explore Packages
+                </RainbowButton>
+              </div>
+              <div className="relative flex size-full w-full items-center justify-center overflow-hidden rounded-lg px-20 pb-40 pt-8 md:pb-60">
+                <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 capitalize">
+                  Lifelong Memories Just a click away
+                </span>
+                <Globe className="top-28" />
+                <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
