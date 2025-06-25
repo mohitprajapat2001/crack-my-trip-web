@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 /**
  * Landing Page
  */
-import Navbar from "@/components/custom/Navbar";
+import Navbar from "@/components/custom/landing/Navbar";
+import TopDestination from "@/components/custom/landing/TopDestination";
 /**
  * Utilities
  */
@@ -47,8 +48,10 @@ const Landing = () => {
           {/* Content layer */}
           <div className="relative z-10">
             <Navbar />
-            <div className="grid grid-cols-2 gap-2 mx-auto w-10/12 backdrop-blur-sm p-5 rounded-3xl hover:shadow-lg transition-all duration-300">
-              <div className="size-full max-w-2xl items-start justify-center overflow-hidden flex flex-col gap-4">
+            {/* Hero Section */}
+            <div className="grid grid-cols-2 gap-2 mx-auto w-10/12 min-h-[calc(100vh-8rem)] backdrop-blur-sm p-5 rounded-3xl hover:shadow-lg transition-all duration-300">
+              {/* Text Div */}
+              <div className="size-full flex flex-col items-start justify-center overflow-hidden gap-4">
                 <div className="capitalize">
                   <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <p className="text-6xl font-semibold">
@@ -78,15 +81,20 @@ const Landing = () => {
                   Explore Packages
                 </RainbowButton>
               </div>
-              <div className="relative flex size-full w-full items-center justify-center overflow-hidden rounded-lg px-20 pb-40 pt-8 md:pb-60">
+              {/* Globe Div */}
+              <div className="relative flex w-full justify-center overflow-hidden rounded-lg px-40 pb-40 md:pb-60">
                 <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 capitalize">
-                  Lifelong Memories Just a click away
+                  Go Beyond Your Dreams
                 </span>
-                <Globe className="top-28" />
+                <Globe className="top-16 scale-110" />
                 <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
               </div>
             </div>
           </div>
+        </div>
+        {/* Top Destination */}
+        <div>
+          <TopDestination />
         </div>
       </div>
     </>

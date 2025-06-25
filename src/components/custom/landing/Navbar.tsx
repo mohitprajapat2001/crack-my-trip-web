@@ -6,7 +6,7 @@ import { useTheme } from "@/providers/theme-providers";
  * UI Components
  */
 import { buttonVariants } from "@/components/ui/button";
-import { ShinyButton } from "../magicui/shiny-button";
+import { ShinyButton } from "../../magicui/shiny-button";
 import { Separator } from "@/components/ui/separator";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import {
