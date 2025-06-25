@@ -65,7 +65,7 @@ const Navbar = () => {
           <ShinyButton className="p-3 rounded-full">
             <MenuIcon className="size-6" />
           </ShinyButton>
-          <h1 className="pointer-events-none text-3xl font-bold leading-none">
+          <h1 className="pointer-events-none text-3xl font-extrabold [text-shadow:#fff_1px_0_20px]">
             Crack My Trip
           </h1>
         </div>
