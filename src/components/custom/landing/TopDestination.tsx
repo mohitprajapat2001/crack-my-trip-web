@@ -1,8 +1,6 @@
 /**
  * The `TopDestination` component is a React functional component that returns JSX
  */
-import { cn } from "@/lib/utils";
-
 /**
  * The `TopDestination` component is a React functional component that returns JSX
  */
@@ -14,7 +12,6 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
@@ -34,8 +31,8 @@ const TopDestination = () => {
   console.log(PLACES);
   return (
     <>
-      <div className="w-10/12 mx-auto border pb-5">
-        <div className="relative flex h-[256px] w-full flex-col items-center justify-center overflow-hidden bg-background">
+      <div>
+        <div className="relative flex h-[256px] w-full flex-col items-center justify-center overflow-hidden bg-transparent">
           <p className="z-10 whitespace-pre-wrap text-center text-7xl font-medium tracking-tighter capitalize">
             Top Destination
           </p>
