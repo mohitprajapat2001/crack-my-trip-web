@@ -4,17 +4,20 @@ import { useState, useEffect } from "react";
  */
 import Navbar from "@/components/custom/landing/Navbar";
 import TopDestination from "@/components/custom/landing/TopDestination";
+import Services from "@/components/custom/landing/Services";
 /**
  * Utilities
  */
 import { getPhotos } from "@/utils/unsplash";
 import bg from "@/assets/img/bg/boat-in-mountain.jpg";
+import { useTheme } from "@/providers/theme-providers";
 /**
  * Components
  */
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { Globe } from "@/components/magicui/globe";
+import { Particles } from "@/components/magicui/particles";
 
 /**
  * The Landing page component.
@@ -26,6 +29,7 @@ import { Globe } from "@/components/magicui/globe";
  */
 const Landing = () => {
   const [image, setImage] = useState(bg);
+  const { theme } = useTheme();
   useEffect(() => {
     const fetchPhoto = async () => {
       const response = null;
@@ -96,8 +100,18 @@ const Landing = () => {
           </div>
         </div>
         {/* Top Destination */}
-        <div>
-          <TopDestination />
+        <div className="relative">
+          <Particles
+            className="absolute inset-0 z-0 transition-all duration-300"
+            quantity={200}
+            ease={80}
+            color={theme === "dark" ? "#ffffff" : "#000000"}
+            refresh
+          />
+          <div className="flex flex-col w-10/12 mx-auto border gap-5">
+            <TopDestination />
+            <Services />
+          </div>
         </div>
       </div>
     </>
