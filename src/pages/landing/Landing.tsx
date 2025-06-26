@@ -28,13 +28,16 @@ const Landing = () => {
   const [image, setImage] = useState(bg);
   useEffect(() => {
     const fetchPhoto = async () => {
-      const photo = await getPhotos("mountains");
-      if (photo != null) {
-        setImage(photo);
+      const response = null;
+      /**TODO: Uncomment to use unsplash */
+      // const response = await getPhotos("mountains");
+      if (response != null) {
+        setImage(response); // setImage is your state setter
       }
     };
     fetchPhoto();
   }, []);
+
   return (
     <>
       <div className="flex flex-col transition-all duration-300">

@@ -1,21 +1,21 @@
 /**
  * Top Places Travels Loves # Constant
  */
-import amritsar from "@/assets/img/places/amritsar.jpg";
-import bali from "@/assets/img/places/bali.jpg";
-import dubai from "@/assets/img/places/dubai.jpg";
-import europe from "@/assets/img/places/europe.jpg";
-import goa from "@/assets/img/places/goa.jpg";
-import kerela from "@/assets/img/places/kerela.jpg";
-import ladakh from "@/assets/img/places/ladakh.jpg";
-import maldives from "@/assets/img/places/maldives.jpg";
-import mountabu from "@/assets/img/places/mountabu.jpg";
-import mumbai from "@/assets/img/places/mumbai.jpg";
-import singapore from "@/assets/img/places/singapore.jpg";
-import srilanka from "@/assets/img/places/srilanka.jpg";
-import thailand from "@/assets/img/places/thailand.jpg";
-import udaipur from "@/assets/img/places/udaipur.jpg";
-import varanasi from "@/assets/img/places/varanasi.jpg";
+import amritsar from "@/assets/places/amritsar.jpg";
+import bali from "@/assets/places/bali.jpg";
+import dubai from "@/assets/places/dubai.jpg";
+import europe from "@/assets/places/europe.jpg";
+import goa from "@/assets/places/goa.jpg";
+import kerela from "@/assets/places/kerela.jpg";
+import ladakh from "@/assets/places/ladakh.jpg";
+import maldives from "@/assets/places/maldives.jpg";
+import mountabu from "@/assets/places/mountabu.jpg";
+import mumbai from "@/assets/places/mumbai.jpg";
+import singapore from "@/assets/places/singapore.jpg";
+import srilanka from "@/assets/places/srilanka.jpg";
+import thailand from "@/assets/places/thailand.jpg";
+import udaipur from "@/assets/places/udaipur.jpg";
+import varanasi from "@/assets/places/varanasi.jpg";
 
 export const PLACES = [
   {
